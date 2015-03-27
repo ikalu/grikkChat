@@ -15,6 +15,9 @@
     "16": "icons/icon.png"
  
     },
+    "permissions":[
+    	"activeTab"
+    ],
 
 	"background": {
     "page": "bg/background.html",
