@@ -1,0 +1,32 @@
+{
+	//required
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"name": "GRChat",
+
+	//recommended
+	"description": "Talk to a buddy on same web page as you",
+
+	//action(s)
+
+	//optional
+
+	"icons": {
+    "16": "icons/icon.png"
+ 
+    },
+
+	"background": {
+    "page": "bg/background.html",
+    "persistent": true
+     },
+
+	"author": "GRIKK",
+	"browser_action":{
+		"default_icon": "icons/icon.png",
+		"default_popup": "index.html"
+	},
+
+	
+  	"content_security_policy": "script-src 'self' https://ajax.googleapis.com https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+}
