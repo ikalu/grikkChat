@@ -2,12 +2,24 @@
 
   // CREATE A REFERENCE TO FIREBASE
   var messagesRef = new Firebase('https://vivid-heat-1924.firebaseio.com/');
+  //get current tab information
+  /*chrome.tabs.getSelected(null, function(tab){
+    var tab = tab.id;
+    tabURL = tab.url;
+    alert(tabURL);
+  });
+  var tabId = tab.id;*/
 
   // REGISTER DOM ELEMENTS
   var messageField = $('#messageInput');
   var nameField = $('#nameInput');
   var messageList = $('#example-messages');
 
+  /*if(tabID != tab.id){
+    //new connection to firebase
+    this._firebase - firebase;
+    function(tab);
+  }*/
   // LISTEN FOR KEYPRESS EVENT
   messageField.keypress(function (e) {
     if (e.keyCode == 13) {
@@ -35,7 +47,7 @@
     messageElement.text(message).prepend(nameElement);
 
     //ADD MESSAGE
-    messageList.append(messageElement)
+    messageList.append(messageElement);
 
     //SCROLL TO BOTTOM OF MESSAGE LIST
     messageList[0].scrollTop = messageList[0].scrollHeight;
